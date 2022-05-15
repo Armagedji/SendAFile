@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 align="center">SendAFile</h1><div class="col-md6 border rounded">
-  <h2 align="center"> Загрузите ваш файл на несколько дней!</h2>
-  <h3 align="center"> Доступные форматы файлов: txt, zip, rar, img, jpg, jpeg, bmp, png</h3>
+<h1 align="center">SendAFile</h1>
+<div class="col-md6 border rounded">
+    <h2 align="center"> Загрузите ваш файл на несколько дней!</h2>
+    <h3 align="center"> Максимальный размер файла: 64МБ. Доступные форматы файлов: txt, zip, rar, img, jpg, jpeg, bmp,
+        png</h3>
     <div align="center">
-      <form method="post" enctype="multipart/form-data"><br>
-        {{ form.file_input }}
-          <br>
-          <br>
-        <label> Количество дней (не больше 10):</label>
-        {{ form.days }}
-          <br>
-          <br>
-        <label> Пароль для файла (оставьте пустым, если пароль не нужен):</label>
-        {{ form.password }}
-          <br>
-          <br>
-        {{ form.submit }}
-      </form>
+        <form method="post" enctype="multipart/form-data"><br>
+            {{ form.file_input }}
+            <br>
+            <br>
+            <label> Количество дней (не больше 10):</label>
+            {{ form.days }}
+            <br>
+            <br>
+            <label> Пароль для файла (оставьте пустым, если пароль не нужен):</label>
+            {{ form.password }}
+            <br>
+            <br>
+            {{ form.submit }}
+        </form>
     </div>
 </div>
 {% endblock %}
