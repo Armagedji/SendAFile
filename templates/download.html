@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align="center">Скачать файл</h1><div class="col-md6 border rounded">
+    <div align="center">
+      <form method="post" enctype="multipart/form-data">
+          <br>
+       <label> Название файла: {{name}} </label> <br> <br>
+       <label> Пароль от файла (если нужен): </label>
+       {{ form.password }} <br> <br>
+       {{ form.submit }}
+      </form>
+    </div>
+</div>
+{% endblock %}
